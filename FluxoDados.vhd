@@ -15,8 +15,11 @@ entity FluxoDados is
 	 
     port (
 		-- portas de entrada
-      CLOCK_50: in std_logic
-
+      CLOCK_50: in std_logic;
+		saida_ULA: out STD_LOGIC_VECTOR(dataWidth-1 downto 0);
+		saida_ROM: OUT STD_LOGIC_VECTOR (dataWidth-1 DOWNTO 0);
+		saida_A: out std_logic_vector((dataWidth -1) downto 0);
+		saida_B: out std_logic_vector((dataWidth -1) downto 0)
     );
 	 
 end entity;
@@ -31,9 +34,9 @@ architecture comportamento of FluxoDados is
 	SIGNAL ULAentradaB : std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL ULA_OUT :  std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL flag_zero :  std_logic;
-	signal palavraControle : std_logic_vector(1 downto 0);
+	signal palavraControle : std_logic_vector(3 downto 0);
 	
-	alias operacao : std_logic is palavraControle(1);
+	alias operacao : std_logic_vector(2 downto 0) is palavraControle(3 downto 1);
 	alias HabEscrReg : std_logic is palavraControle(0);
 	
 	alias opCode   : std_logic_vector(5 downto 0) is Instrucao(31 downto 26); -- opcode [31-26]
@@ -108,5 +111,10 @@ architecture comportamento of FluxoDados is
 					func => func,
 					palavraControle => palavraControle
 			 );
-
+			 
+	saida_ULA <= ULA_OUT;
+	saida_ROM <= Instrucao;
+	saida_A <= ULAentradaA;
+	saida_B <= ULAentradaB;
+	
 end architecture;
