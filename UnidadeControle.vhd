@@ -51,7 +51,7 @@ architecture arch_name of UnidadeControle is
 						"001" when (opCode = tipoR and func = func_sub) else
 						"010" when (opCode = tipoR and func = func_or) else
 						"011" when (opCode = tipoR and func = func_and) else
-						"100" when (opCode = tipoR and func = func_alt) else
+						"100" when (opCode = tipoR and func = func_slt) else
 						"000";
 						
 	mux_RtRd		<= '1' when (opCode = tipoR) else '0';

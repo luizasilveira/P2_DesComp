@@ -35,7 +35,7 @@ architecture comportamento of FluxoDados is
 	SIGNAL ULA_OUT :  std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL flag_zero :  std_logic;
 	signal palavraControle : std_logic_vector(3 downto 0);
-	signal mux_reg_out : std_logic_vector(5 downto 0);
+	signal mux_reg_out : std_logic_vector(4 downto 0);
 	signal mux_ula_out : std_logic_vector(addrWidth-1 downto 0);
 	signal mux_pc_out : std_logic_vector(addrWidth-1 downto 0);
 	signal mux_ULAMem_out : std_logic_vector(addrWidth-1 downto 0);
@@ -43,6 +43,7 @@ architecture comportamento of FluxoDados is
 	signal estende_out : std_logic_vector(addrWidth-1 downto 0);
 	signal inc_out : std_logic_vector(addrWidth-1 downto 0);
 	signal soma_out : std_logic_vector(addrWidth-1 downto 0);
+	signal mem_out : std_logic_vector(addrWidth-1 downto 0);
 	
 	
 	alias mux_pc    		: std_logic is palavraControle(0);
@@ -80,7 +81,7 @@ architecture comportamento of FluxoDados is
 			)
           port map (
 					clk => CLOCK_50,
-					DIN => PC_IN,
+					DIN => mux_pc_out,
 					DOUT => PC_Out,
 					ENABLE => '1',
 					RST => '0'
@@ -102,9 +103,9 @@ architecture comportamento of FluxoDados is
 					 clk => CLOCK_50,
 					 enderecoA => rs,
 					 enderecoB => rt,
-					 enderecoC => mux_ULAMem_out,
-					 dadoEscritaC => ULA_OUT,
-					 escreveC => HabEscrReg, 
+					 enderecoC => mux_reg_out,
+					 dadoEscritaC => mux_ULAMem_out,
+					 escreveC => escritaReg, 
 					 saidaA => ULAentradaA,
 					 saidaB => mux_ula_in
 			);
@@ -128,12 +129,8 @@ architecture comportamento of FluxoDados is
 				func => func,
 				palavraControle => palavraControle
 		 );
---		     PORT (
---        entradaA_MUX, entradaB_MUX : IN STD_LOGIC_VECTOR((larguraDados - 1) DOWNTO 0);
---        seletor_MUX                : IN STD_LOGIC;
---        saida_MUX                  : OUT STD_LOGIC_VECTOR((larguraDados - 1) DOWNTO 0)
---    );
-	MUX_PC: entity work.muxGenerico2x1
+
+	MUXPC: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
 			  ) 
@@ -146,7 +143,7 @@ architecture comportamento of FluxoDados is
 			  
 	MUX_Reg: entity work.muxGenerico2x1
 			  generic map (
-					larguraDados => addrWidth
+					larguraDados => 5
 			  ) 
 			  port map (
 					entradaA_MUX => rt ,
@@ -178,9 +175,12 @@ architecture comportamento of FluxoDados is
 
 		  );			  
 
-	soma: entity work.somadorGenerico 
+	soma: entity work.somadorGenerico
+			 generic map (
+					larguraDados => addrWidth
+			  ) 
 		port map (
-			entrada => inc_out,
+			entradaA => inc_out,
 			entradaB => estende_out(29 DOWNTO 0) & "00",
 			saida => soma_out
 		);
@@ -195,20 +195,34 @@ architecture comportamento of FluxoDados is
 					seletor_MUX  => sel_beq and flag_zero,
 					saida_MUX  => mux_BEQ_out
 		  	  );
-	MUX_UlaMem: entity work.muxGenerico2x1
+	MUX_Mem: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
 			  ) 
 			  port map (
 					entradaA_MUX => ULA_OUT,
-					entradaB_MUX =>  ,
+					entradaB_MUX => mem_out ,
 					seletor_MUX  => mux_ULAMem,
 					saida_MUX  => mux_ULAMem_out
-		  	  );			  		
+		  	  );
+			 
+	RAM: entity work.RAMMIPS 
+			generic map(
+				dataWidth  => addrWidth,
+				addrWidth  => addrWidth
+			)
+          port map (
+					clk => CLOCK_50,
+					Endereco => ULA_OUT,
+					Dado_in => mux_ula_in,
+					Dado_out => mem_out,
+					we => escritaMem
+			 );			 
+		  
 			 
 	saida_ULA <= ULA_OUT;
 	saida_ROM <= Instrucao;
 	saida_A <= ULAentradaA;
-	saida_B <= ULAentradaB;
+	saida_B <= mux_ula_out;
 	
 end architecture;
