@@ -104,13 +104,24 @@ architecture comportamento of FluxoDados is
 					flagZero => flag_zero
 				);	
 				
-		UC: entity work.UnidadeControle
-          port map (
-					clk => CLOCK_50,
-					opCode => opCode,
-					func => func,
-					palavraControle => palavraControle
-			 );
+	UC: entity work.UnidadeControle
+		 port map (
+				clk => CLOCK_50,
+				opCode => opCode,
+				func => func,
+				palavraControle => palavraControle
+		 );
+		 
+--	MUX_PC: entity work.somadorGenerico
+--			  generic map (
+--					larguraDados => addrWidth
+--			  ) 
+--			  port map (
+--					entradaA => ,
+--					entradaB => ,
+--					saida    => 
+--		  	  );
+
 			 
 	saida_ULA <= ULA_OUT;
 	saida_ROM <= Instrucao;
