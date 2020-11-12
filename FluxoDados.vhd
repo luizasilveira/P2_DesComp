@@ -34,7 +34,7 @@ architecture comportamento of FluxoDados is
 	SIGNAL mux_ula_in : std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL ULA_OUT :  std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL flag_zero :  std_logic;
-	signal palavraControle : std_logic_vector(3 downto 0);
+	signal palavraControle : std_logic_vector(7 downto 0);
 	signal mux_reg_out : std_logic_vector(4 downto 0);
 	signal mux_ula_out : std_logic_vector(addrWidth-1 downto 0);
 	signal mux_pc_out : std_logic_vector(addrWidth-1 downto 0);
@@ -44,17 +44,18 @@ architecture comportamento of FluxoDados is
 	signal inc_out : std_logic_vector(addrWidth-1 downto 0);
 	signal soma_out : std_logic_vector(addrWidth-1 downto 0);
 	signal mem_out : std_logic_vector(addrWidth-1 downto 0);
+	signal ulaop : std_logic_vector(1 downto 0);
+	signal operacao 		: std_logic_vector(2 downto 0);
 	
 	
 	alias mux_pc    		: std_logic is palavraControle(0);
 	alias mux_RtRd			: std_logic is palavraControle(1);
 	alias escritaReg	 	: std_logic is palavraControle(2);
 	alias mux_RtImed		: std_logic is palavraControle(3);
-	alias operacao 		: std_logic_vector(2 downto 0) is palavraControle(6 downto 4);
-	alias mux_ULAMem		: std_logic is palavraControle(7);
-	alias sel_beq			: std_logic is palavraControle(8);
-	alias leituraMem		: std_logic is palavraControle(9);
-	alias escritaMem		: std_logic is palavraControle(10);  
+	alias mux_ULAMem		: std_logic is palavraControle(4);
+	alias sel_beq			: std_logic is palavraControle(5);
+	alias leituraMem		: std_logic is palavraControle(6);
+	alias escritaMem		: std_logic is palavraControle(7);  
 	
 	alias opCode   : std_logic_vector(5 downto 0) is Instrucao(31 downto 26); -- opcode [31-26]
 	alias rs   		: std_logic_vector(4 DOWNTO 0) is Instrucao(25 DOWNTO 21); -- regA   [25-21]
@@ -110,25 +111,43 @@ architecture comportamento of FluxoDados is
 					 saidaB => mux_ula_in
 			);
 				
-	ULA : entity work.ULA 
-				generic map(
-					larguraDados => dataWidth
-				)
+--	ULA : entity work.ULA 
+--				generic map(
+--					larguraDados => dataWidth
+--				)
+--				port map (
+--					entradaA => ULAentradaA,
+--					entradaB => mux_ula_out,
+--					saida => ULA_OUT,
+--					seletor => operacao,
+--					flagZero => flag_zero
+--				);	
+--      entradaA, entradaB:  in STD_LOGIC_VECTOR(31 downto 0);
+--      seletor:  in STD_LOGIC_VECTOR(2 downto 0);
+--      resultado: STD_LOGIC_VECTOR(31 downto 0);
+--		ZERO : out STD_LOGIC;
+--    );
+	ULA32 : entity work.ULA_32bit 
 				port map (
 					entradaA => ULAentradaA,
 					entradaB => mux_ula_out,
-					saida => ULA_OUT,
+					resultado => ULA_OUT,
 					seletor => operacao,
-					flagZero => flag_zero
-				);	
-				
+					ZERO => flag_zero
+				);					
 	UC: entity work.UnidadeControle
 		 port map (
-				clk => CLOCK_50,
 				opCode => opCode,
-				func => func,
+				ULAop => ulaop,
 				palavraControle => palavraControle
 		 );
+
+	UC_ULA: entity work.UnidadeControleULA
+		 port map (
+				func => func,
+				ULAop => ulaop,
+				ULActrl => operacao
+		 );		 
 
 	MUXPC: entity work.muxGenerico2x1
 			  generic map (

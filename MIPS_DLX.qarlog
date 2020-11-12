@@ -1,25 +1,47 @@
-Quartus Prime Archive log --	C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/MIPS_DLX.qarlog
+Quartus Prime Archive log --	C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.qarlog
 
-Archive:	C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/MIPS_DLX.qar
-Date:		Fri Oct 30 23:58:15 2020
+Archive:	C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.qar
+Date:		Fri Nov 06 23:55:17 2020
 Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 	=========== Files Selected: ===========
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/FluxoDados.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/MIPS_DLX.qpf
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/MIPS_DLX.qsf
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/RAMMIPS.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/ROMMIPS.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/ULA.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/UnidadeControle.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform.vwf
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform1.vwf
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform2.vwf
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/bancoRegistradores.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/registradorGenerico.vhd
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/somaConstante.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.archive.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.qarlog
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.qpf
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.qsf
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMcontent.mif
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform.vwf
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform1.vwf
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform2.vwf
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/c5_pin_model_dump.txt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.asm.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.done
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.eda.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.fit.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.fit.smsg
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.fit.summary
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.flow.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.jdi
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.map.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.map.summary
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.pin
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.sld
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.sof
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.sta.rpt
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/output_files/MIPS_DLX.sta.summary
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/registradorGenerico.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd
 c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
-	======= Total: 14 files to archive =======
+	======= Total: 36 files to archive =======
 
 	================ Status: ===============
 All files archived successfully.

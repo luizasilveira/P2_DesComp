@@ -1,0 +1,33 @@
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd
+ts:1604711109
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd
+ts:1603991640
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd
+ts:1604710514
+init:{C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMcontent.mif}
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd
+ts:1604717416
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd
+ts:1604713623
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd
+ts:1604711241
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd
+ts:1604717519
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd
+ts:1603991530
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd
+ts:1604710514
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/registradorGenerico.vhd
+ts:1603991775
+init:
+file:C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA.vhd
+ts:1604710514
+init:
