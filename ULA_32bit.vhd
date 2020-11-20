@@ -26,13 +26,13 @@ architecture comportamento of ULA_32bit is
 	 
 	 seletor_1bit <= "00" when seletor = "000" else
 	 "01" when seletor = "001" else
-	 "10" when seletor = "010" and seletor = "110" else
+	 "10" when seletor = "010" or seletor = "110" or seletor = "111" else
 	 "11";
 		
-	 sigEntradaB <= not(entradaB) when seletor = "110" else
+	 sigEntradaB <= std_logic_vector(unsigned(not(entradaB)) + 1) when seletor = "110" or seletor = "111" else
 						entradaB;
 	 
-	 V   <= (not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
+	 V   <= Cout(30) xor Cout(31); --(not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
 	 slt <= "0000000000000000000000000000000" & (saida(31) xor V);
 	 resultado <= slt when seletor = "111" else saida;
 	 ZERO <= '1' when unsigned(saida) = unsigned(valorZero) else '0';

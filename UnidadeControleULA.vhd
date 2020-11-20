@@ -20,8 +20,8 @@ architecture arch_name of UnidadeControleULA is
 	-- instruções tipo R
 	constant func_add : std_logic_vector(5 downto 0) := "100000";
    constant func_sub : std_logic_vector(5 downto 0) := "100010";
-	constant func_or	: std_logic_vector(5 downto 0) := "100100";
-	constant func_and	: std_logic_vector(5 downto 0) := "100101";
+	constant func_or	: std_logic_vector(5 downto 0) := "100101";
+	constant func_and	: std_logic_vector(5 downto 0) := "100100";
 	constant func_slt	: std_logic_vector(5 downto 0) := "101010";
 	
 	-- instruções tipo I

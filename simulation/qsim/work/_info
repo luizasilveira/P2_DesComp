@@ -8,37 +8,38 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim
+dC:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim
 Efluxodados
-Z1 w1604600374
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 26
-R0
+Z0 w1605819906
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 64
+Z10 dC:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim
 Z11 8MIPS_DLX.vho
 Z12 FMIPS_DLX.vho
 l0
 L39 1
-VMHjXZodUm[mcbP8?HW5EN3
-!s100 Q`:>TdU7FnhB8fn:Wo[XL2
+VFBYC]^C8CWRLl@]=Hck_a1
+!s100 n3aEm=zTiPY5SS7cD1jXU3
 Z13 OV;C;2020.1;71
 32
-Z14 !s110 1604600378
+Z14 !s110 1605819908
 !i10b 1
-Z15 !s108 1604600377.000000
+Z15 !s108 1605819908.000000
 Z16 !s90 -work|work|MIPS_DLX.vho|
 Z17 !s107 MIPS_DLX.vho|
 !i113 1
 Z18 o-work work
 Z19 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
@@ -47,13 +48,12 @@ R6
 R7
 R8
 R9
-R10
-DEx4 work 10 fluxodados 0 22 MHjXZodUm[mcbP8?HW5EN3
-!i122 26
-l274
-L49 2817
-V<4KY3Fj]h[2O0:HYZHmlQ1
-!s100 :SaM>`3BK]HbKA]Qb5hVm3
+DEx4 work 10 fluxodados 0 22 FBYC]^C8CWRLl@]=Hck_a1
+!i122 64
+l7125
+L54 68687
+V0Ljz4b?6X5cT;hidWle<23
+!s100 >IFiNX:2^i0ImJZ<b3SaT0
 R13
 32
 R14
@@ -65,43 +65,135 @@ R17
 R18
 R19
 Efluxodados_vhd_vec_tst
-Z20 w1604600373
+Z20 w1605819904
+R7
 R8
-R9
-!i122 27
-R0
-Z21 8Waveform2.vwf.vht
-Z22 FWaveform2.vwf.vht
+!i122 65
+R10
+Z21 8Waveform4.vwf.vht
+Z22 FWaveform4.vwf.vht
 l0
-L32 1
+Z23 L32 1
 V?]l9QY9:HKLo_1oeO6]2T3
 !s100 h3VBEdKO>m;NL9aUb==e53
 R13
 32
-R14
+Z24 !s110 1605819910
 !i10b 1
-Z23 !s108 1604600378.000000
-Z24 !s90 -work|work|Waveform2.vwf.vht|
-Z25 !s107 Waveform2.vwf.vht|
+Z25 !s108 1605819910.000000
+Z26 !s90 -work|work|Waveform4.vwf.vht|
+Z27 !s107 Waveform4.vwf.vht|
 !i113 1
 R18
 R19
 Afluxodados_arch
+R7
 R8
-R9
-Z26 DEx4 work 22 fluxodados_vhd_vec_tst 0 22 ?]l9QY9:HKLo_1oeO6]2T3
-!i122 27
-l51
-Z27 L34 44
-Z28 VR5V4:E_B5L?:XJT2iW2bB0
-Z29 !s100 CG?i=4@dQ@3Jlg;WkIFTN1
+Z28 DEx4 work 22 fluxodados_vhd_vec_tst 0 22 ?]l9QY9:HKLo_1oeO6]2T3
+!i122 65
+l61
+Z29 L34 55
+Z30 VH;WAE;W2eA]VK@<jd@`Sf2
+Z31 !s100 L<BBdJH?U@m3Qh=2YfH8W1
 R13
 32
-R14
-!i10b 1
-R23
 R24
+!i10b 1
 R25
+R26
+R27
+!i113 1
+R18
+R19
+Eula_32bit
+Z32 w1605818443
+R4
+R1
+R6
+R2
+R7
+R8
+R3
+!i122 54
+R10
+R11
+R12
+l0
+L37 1
+VEbXL3P`CXVjaLRgZW1d4>2
+!s100 j[G8F6e3W1]kSozj`Aa<k2
+R13
+32
+Z33 !s110 1605818445
+!i10b 1
+Z34 !s108 1605818445.000000
+R16
+R17
+!i113 1
+R18
+R19
+Astructure
+R4
+R1
+R6
+R2
+R7
+R8
+R3
+DEx4 work 9 ula_32bit 0 22 EbXL3P`CXVjaLRgZW1d4>2
+!i122 54
+l678
+L47 6084
+VPEg<G`CfQlQi>Q?O`fh`H3
+!s100 7nY2bE4l>9V0Yi;39L=J40
+R13
+32
+R33
+!i10b 1
+R34
+R16
+R17
+!i113 1
+R18
+R19
+Eula_32bit_vhd_vec_tst
+Z35 w1605818441
+R7
+R8
+!i122 55
+R10
+Z36 8Waveform5.vwf.vht
+Z37 FWaveform5.vwf.vht
+l0
+R23
+VdRZ`o79il9;_m?ffJLf]B1
+!s100 R`kFX8QRSNdRV;[KGmR4;1
+R13
+32
+R33
+!i10b 1
+R34
+Z38 !s90 -work|work|Waveform5.vwf.vht|
+Z39 !s107 Waveform5.vwf.vht|
+!i113 1
+R18
+R19
+Aula_32bit_arch
+R7
+R8
+DEx4 work 21 ula_32bit_vhd_vec_tst 0 22 dRZ`o79il9;_m?ffJLf]B1
+!i122 55
+l51
+L34 446
+V[?:0YiQ0g5LB^KFdT23BR1
+!s100 m@QTMGg][[knegNz]Nmo72
+R13
+32
+R33
+!i10b 1
+R34
+R38
+R39
 !i113 1
 R18
 R19

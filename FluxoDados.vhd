@@ -18,8 +18,13 @@ entity FluxoDados is
       CLOCK_50: in std_logic;
 		saida_ULA: out STD_LOGIC_VECTOR(dataWidth-1 downto 0);
 		saida_ROM: OUT STD_LOGIC_VECTOR (dataWidth-1 DOWNTO 0);
-		saida_A: out std_logic_vector((dataWidth -1) downto 0);
-		saida_B: out std_logic_vector((dataWidth -1) downto 0)
+		entrada_ulaA: out std_logic_vector((dataWidth -1) downto 0);
+		entrada_ulaB: out std_logic_vector((dataWidth -1) downto 0);
+		saida_pc : out std_logic_vector((dataWidth -1) downto 0);
+		entradaA_rs : out std_logic_vector(4 DOWNTO 0);
+		entradaB_rt : out std_logic_vector(4 DOWNTO 0);
+		entradaC_rd : out std_logic_vector(4 DOWNTO 0);
+		dado_escrito_rd: out std_logic_vector(31 DOWNTO 0)
     );
 	 
 end entity;
@@ -154,7 +159,7 @@ architecture comportamento of FluxoDados is
 					larguraDados => addrWidth
 			  ) 
 			  port map (
-					entradaA_MUX => mux_ULAMem_out,
+					entradaA_MUX => mux_BEQ_out,
 					entradaB_MUX => soma_out(31 downto 28) & imedJ & "00",
 					seletor_MUX  => mux_pc,
 					saida_MUX  => mux_pc_out
@@ -166,7 +171,7 @@ architecture comportamento of FluxoDados is
 			  ) 
 			  port map (
 					entradaA_MUX => rt ,
-					entradaB_MUX => rs ,
+					entradaB_MUX => rd ,
 					seletor_MUX  => mux_RtRd,
 					saida_MUX  => mux_reg_out
 		  	  );
@@ -241,7 +246,12 @@ architecture comportamento of FluxoDados is
 			 
 	saida_ULA <= ULA_OUT;
 	saida_ROM <= Instrucao;
-	saida_A <= ULAentradaA;
-	saida_B <= mux_ula_out;
+	entrada_ulaA <= ULAentradaA;
+	entrada_ulaB <= mux_ula_out;
+	saida_pc <= PC_Out;
+	entradaA_rs <= rs;
+	entradaB_rt<= rt;
+	entradaC_rd<= mux_reg_out;
+	dado_escrito_rd <= mux_ULAMem_out;
 	
 end architecture;

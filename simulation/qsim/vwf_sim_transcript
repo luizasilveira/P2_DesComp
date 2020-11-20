@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX -c MIPS_DLX --vector_source="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform2.vwf" --testbench_file="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/Waveform2.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX -c MIPS_DLX --vector_source="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform4.vwf" --testbench_file="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/Waveform4.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,18 +26,18 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Nov 05 15:19:32 2020
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX -c MIPS_DLX --vector_source="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform2.vwf" --testbench_file="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/Waveform2.vwf.vht"
+    Info: Processing started: Thu Nov 19 18:05:03 2020
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off MIPS_DLX -c MIPS_DLX --vector_source="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform4.vwf" --testbench_file="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/Waveform4.vwf.vht"
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-" in vector source file when writing test bench files
+ng test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/" MIPS_DLX -c MIPS_DLX
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/" MIPS_DLX -c MIPS_DLX
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -56,22 +56,22 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Thu Nov 05 15:19:33 2020
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/" MIPS_DLX -c MIPS_DLX
+    Info: Processing started: Thu Nov 19 18:05:05 2020
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/" MIPS_DLX -c MIPS_DLX
 Info (119006): Selected device 5CEBA4F23C7 for design "MIPS_DLX"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file MIPS_DLX.vho in folder "C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file MIPS_DLX.vho in folder "C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4724 megabytes
-    Info: Processing ended: Thu Nov 05 15:19:35 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Thu Nov 19 18:05:06 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/MIPS_DLX.do generated.
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/MIPS_DLX.do generated.
 
 Completed successfully. 
 
@@ -81,16 +81,13 @@ c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do MIPS_DLX.do
 
 Reading pref.tcl
 
-
 # 2020.1
-
 
 # do MIPS_DLX.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:19:37 on Nov 05,2020
+# Start time: 18:05:08 on Nov 19,2020
 # vcom -work work MIPS_DLX.vho 
 
 # -- Loading package STANDARD
@@ -104,25 +101,26 @@ Reading pref.tcl
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
 # -- Compiling entity FluxoDados
-
 # -- Compiling architecture structure of FluxoDados
 
-# End time: 15:19:38 on Nov 05,2020, Elapsed time: 0:00:01
+# End time: 18:05:10 on Nov 19,2020, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
+
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:19:38 on Nov 05,2020
-# vcom -work work Waveform2.vwf.vht 
+# Start time: 18:05:10 on Nov 19,2020
+# vcom -work work Waveform4.vwf.vht 
 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FluxoDados_vhd_vec_tst
 # -- Compiling architecture FluxoDados_arch of FluxoDados_vhd_vec_tst
-# End time: 15:19:38 on Nov 05,2020, Elapsed time: 0:00:00
+
+# End time: 18:05:10 on Nov 19,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.FluxoDados_vhd_vec_tst 
-# Start time: 15:19:39 on Nov 05,2020
+# Start time: 18:05:10 on Nov 19,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -140,24 +138,31 @@ Reading pref.tcl
 # Loading cyclonev.cyclonev_io_ibuf(arch)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 21807 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 641593 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
+
 # after#34
 
-# End time: 15:19:40 on Nov 05,2020, Elapsed time: 0:00:01
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# Simulation time: 0 ps
+
+# End time: 18:05:22 on Nov 19,2020, Elapsed time: 0:00:12
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/Waveform2.vwf...
+Reading C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/Waveform4.vwf...
 
-Reading C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/MIPS_DLX.msim.vcd...
+Reading C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/MIPS_DLX.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim/MIPS_DLX_20201105151940.sim.vwf
+Writing the resulting VWF to C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim/MIPS_DLX_20201119180522.sim.vwf
 
 Finished VCD to VWF conversion.
 

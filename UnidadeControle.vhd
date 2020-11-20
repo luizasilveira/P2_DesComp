@@ -40,7 +40,7 @@ architecture arch_name of UnidadeControle is
 						"01" when opcode = beq else
 						"10" ;
 						
-	escritaReg  <= '1' when (opCode = tipoR) else '0';
+	escritaReg  <= '1' when (opCode = tipoR) or (opcode = lw) else '0';
 	
 						
 	mux_RtRd		<= '1' when (opCode = tipoR) else '0';
