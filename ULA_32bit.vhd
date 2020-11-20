@@ -20,6 +20,7 @@ architecture comportamento of ULA_32bit is
 	 signal saida: std_logic_vector(31 downto 0);
 	 signal seletor_1bit: std_logic_vector(1 downto 0);
 	 signal sigEntradaB : std_logic_vector(31 downto 0);
+	 signal imedShift : std_logic_vector(31 downto 0); 
 	 
 
     begin
@@ -31,10 +32,12 @@ architecture comportamento of ULA_32bit is
 		
 	 sigEntradaB <= std_logic_vector(unsigned(not(entradaB)) + 1) when seletor = "110" or seletor = "111" else
 						entradaB;
+	 imedShift <= entradaB(15 downto 0) & x"0000";
 	 
 	 V   <= Cout(30) xor Cout(31); --(not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
 	 slt <= "0000000000000000000000000000000" & (saida(31) xor V);
-	 resultado <= slt when seletor = "111" else saida;
+	 resultado <= slt when seletor = "111" else 
+	 imedShift when seletor = "100" else saida;
 	 ZERO <= '1' when unsigned(saida) = unsigned(valorZero) else '0';
 	 
 	 ULA0 : entity work.ULA_1bit 

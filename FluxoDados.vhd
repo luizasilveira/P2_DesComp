@@ -49,7 +49,7 @@ architecture comportamento of FluxoDados is
 	signal inc_out : std_logic_vector(addrWidth-1 downto 0);
 	signal soma_out : std_logic_vector(addrWidth-1 downto 0);
 	signal mem_out : std_logic_vector(addrWidth-1 downto 0);
-	signal ulaop : std_logic_vector(1 downto 0);
+	signal ulaop : std_logic_vector(2 downto 0);
 	signal operacao 		: std_logic_vector(2 downto 0);
 	
 	

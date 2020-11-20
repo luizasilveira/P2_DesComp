@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity UnidadeControleULA is
   port   (
 	 func 				:  in  std_logic_vector(5 downto 0);
-	 ULAop 				:  in std_logic_vector(1 downto 0);
+	 ULAop 				:  in std_logic_vector(2 downto 0);
     ULActrl  			:  out std_logic_vector(2 downto 0)
 	 
   );
@@ -32,10 +32,11 @@ architecture arch_name of UnidadeControleULA is
 	
   begin		
   
-	ULActrl <= "000" when ULAop = "10" and func = func_and else
-				  "001" when ULAop = "10" and func = func_or else
-				  "010" when ULAop = "00" or (ULAop = "10" and func = func_add) else
-				  "110" when ULAop = "01" or (ULAop = "10" and func = func_sub)  else
-				  "111" when ULAop = "10" and func = func_slt else "011";
+	ULActrl <= "000" when ULAop = "010" and func = func_and else
+				  "001" when ULAop = "011" or (ULAop = "010" and func = func_or) else
+				  "100" when ULAop = "100" else
+				  "010" when ULAop = "000" or (ULAop = "010" and func = func_add) else
+				  "110" when ULAop = "001" or (ULAop = "010" and func = func_sub)  else
+				  "111" when ULAop = "010" and func = func_slt else "011";
 
 end architecture;

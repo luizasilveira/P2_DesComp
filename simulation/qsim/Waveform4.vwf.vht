@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/19/2020 18:05:04"
+-- Generated on "11/20/2020 14:56:57"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FluxoDados
 -- 
@@ -47,15 +47,15 @@ SIGNAL saida_ULA : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FluxoDados
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	dado_escrito_rd : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entrada_ulaA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entrada_ulaB : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entradaA_rs : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
-	entradaB_rt : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
-	entradaC_rd : OUT STD_LOGIC_VECTOR(4 DOWNTO 0);
-	saida_pc : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	saida_ROM : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-	saida_ULA : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	dado_escrito_rd : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	entrada_ulaA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	entrada_ulaB : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	entradaA_rs : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
+	entradaB_rt : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
+	entradaC_rd : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
+	saida_pc : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	saida_ROM : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
+	saida_ULA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN

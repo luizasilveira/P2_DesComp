@@ -7,7 +7,7 @@ entity UnidadeControle is
 
 	 opCode  			:  in  std_logic_vector(5 downto 0);
     palavraControle  :  out std_logic_vector(7 downto 0);
-	 ULAop 				:  out std_logic_vector(1 downto 0)
+	 ULAop 				:  out std_logic_vector(2 downto 0)
   );
 end entity;
 
@@ -32,20 +32,30 @@ architecture arch_name of UnidadeControle is
 	constant lw 		: std_logic_vector(5 downto 0) := "100011";
 	constant sw			: std_logic_vector(5 downto 0) := "101011";
 	constant beq		: std_logic_vector(5 downto 0) := "000100";
+	constant ori		: std_logic_vector(5 downto 0) := "001101";
+	constant lui		: std_logic_vector(5 downto 0) := "001111";
+	
+	
+	
+	
+	-- instruções tipo J
+	constant jmp		: std_logic_vector(5 downto 0) := "000010";
 
 	
   begin		
   
-	ULAop       <= "00" when opcode = lw or opcode = sw else
-						"01" when opcode = beq else
-						"10" ;
+	ULAop       <= "000" when opcode = lw or opcode = sw else
+						"001" when opcode = beq else 
+						"011" when opcode = ori else
+						"100" when opcode = lui else
+						"010" ;
 						
-	escritaReg  <= '1' when (opCode = tipoR) or (opcode = lw) else '0';
+	escritaReg  <= '1' when (opCode = tipoR) or (opcode = lw) or (opcode = ori) or opcode = lui else '0';
 	
 						
 	mux_RtRd		<= '1' when (opCode = tipoR) else '0';
 
-	mux_RtImed	<= '1' when (opCode = lw or opCode = sw) else '0';
+	mux_RtImed	<= '1' when (opCode = lw or opCode = sw or opCode = ori or opcode = lui) else '0';
 						
 	mux_ULAMem	<= '1' when (opCode = lw) else '0';
 						
@@ -54,5 +64,7 @@ architecture arch_name of UnidadeControle is
 	leituraMem	<= '1' when (opCode = lw) else '0';
 	
 	escritaMem	<= '1' when (opCode = sw) else '0';
+	
+	mux_pc <= '1' when (opCode = jmp) else '0';
 
 end architecture;
