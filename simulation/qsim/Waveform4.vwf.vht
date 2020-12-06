@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/20/2020 14:56:57"
+-- Generated on "12/06/2020 19:00:03"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          FluxoDados
 -- 
@@ -35,26 +35,12 @@ ARCHITECTURE FluxoDados_arch OF FluxoDados_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
 SIGNAL CLOCK_50 : STD_LOGIC;
-SIGNAL dado_escrito_rd : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL entrada_ulaA : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL entrada_ulaB : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL entradaA_rs : STD_LOGIC_VECTOR(4 DOWNTO 0);
-SIGNAL entradaB_rt : STD_LOGIC_VECTOR(4 DOWNTO 0);
-SIGNAL entradaC_rd : STD_LOGIC_VECTOR(4 DOWNTO 0);
 SIGNAL saida_pc : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL saida_ROM : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL saida_ULA : STD_LOGIC_VECTOR(31 DOWNTO 0);
 COMPONENT FluxoDados
 	PORT (
 	CLOCK_50 : IN STD_LOGIC;
-	dado_escrito_rd : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entrada_ulaA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entrada_ulaB : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	entradaA_rs : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
-	entradaB_rt : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
-	entradaC_rd : BUFFER STD_LOGIC_VECTOR(4 DOWNTO 0);
 	saida_pc : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
-	saida_ROM : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0);
 	saida_ULA : BUFFER STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
@@ -63,14 +49,7 @@ BEGIN
 	PORT MAP (
 -- list connections between master ports and signals
 	CLOCK_50 => CLOCK_50,
-	dado_escrito_rd => dado_escrito_rd,
-	entrada_ulaA => entrada_ulaA,
-	entrada_ulaB => entrada_ulaB,
-	entradaA_rs => entradaA_rs,
-	entradaB_rt => entradaB_rt,
-	entradaC_rd => entradaC_rd,
 	saida_pc => saida_pc,
-	saida_ROM => saida_ROM,
 	saida_ULA => saida_ULA
 	);
 

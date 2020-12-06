@@ -17,14 +17,7 @@ entity FluxoDados is
 		-- portas de entrada
       CLOCK_50: in std_logic;
 		saida_ULA: out STD_LOGIC_VECTOR(dataWidth-1 downto 0);
-		saida_ROM: OUT STD_LOGIC_VECTOR (dataWidth-1 DOWNTO 0);
-		entrada_ulaA: out std_logic_vector((dataWidth -1) downto 0);
-		entrada_ulaB: out std_logic_vector((dataWidth -1) downto 0);
-		saida_pc : out std_logic_vector((dataWidth -1) downto 0);
-		entradaA_rs : out std_logic_vector(4 DOWNTO 0);
-		entradaB_rt : out std_logic_vector(4 DOWNTO 0);
-		entradaC_rd : out std_logic_vector(4 DOWNTO 0);
-		dado_escrito_rd: out std_logic_vector(31 DOWNTO 0)
+		saida_pc : out std_logic_vector((dataWidth -1) downto 0)
     );
 	 
 end entity;
@@ -115,23 +108,7 @@ architecture comportamento of FluxoDados is
 					 saidaA => ULAentradaA,
 					 saidaB => mux_ula_in
 			);
-				
---	ULA : entity work.ULA 
---				generic map(
---					larguraDados => dataWidth
---				)
---				port map (
---					entradaA => ULAentradaA,
---					entradaB => mux_ula_out,
---					saida => ULA_OUT,
---					seletor => operacao,
---					flagZero => flag_zero
---				);	
---      entradaA, entradaB:  in STD_LOGIC_VECTOR(31 downto 0);
---      seletor:  in STD_LOGIC_VECTOR(2 downto 0);
---      resultado: STD_LOGIC_VECTOR(31 downto 0);
---		ZERO : out STD_LOGIC;
---    );
+
 	ULA32 : entity work.ULA_32bit 
 				port map (
 					entradaA => ULAentradaA,
@@ -165,7 +142,7 @@ architecture comportamento of FluxoDados is
 					saida_MUX  => mux_pc_out
 		  	  );
 			  
-	MUX_Reg: entity work.muxGenerico2x1
+	MUXRtRd: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => 5
 			  ) 
@@ -176,7 +153,7 @@ architecture comportamento of FluxoDados is
 					saida_MUX  => mux_reg_out
 		  	  );
 			  
-	MUX_ULA: entity work.muxGenerico2x1
+	MUXRtImed: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
 			  ) 
@@ -219,7 +196,7 @@ architecture comportamento of FluxoDados is
 					seletor_MUX  => sel_beq and flag_zero,
 					saida_MUX  => mux_BEQ_out
 		  	  );
-	MUX_Mem: entity work.muxGenerico2x1
+	MUXUlaMem: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
 			  ) 
@@ -245,13 +222,6 @@ architecture comportamento of FluxoDados is
 		  
 			 
 	saida_ULA <= ULA_OUT;
-	saida_ROM <= Instrucao;
-	entrada_ulaA <= ULAentradaA;
-	entrada_ulaB <= mux_ula_out;
 	saida_pc <= PC_Out;
-	entradaA_rs <= rs;
-	entradaB_rt<= rt;
-	entradaC_rd<= mux_reg_out;
-	dado_escrito_rd <= mux_ULAMem_out;
-	
+
 end architecture;
