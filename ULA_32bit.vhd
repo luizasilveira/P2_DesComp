@@ -1,3 +1,5 @@
+-- referências: modelos VHDL da matéria de Design de Computadores - Insper 2020.2 - professor Paulo Santos
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
@@ -5,15 +7,23 @@ use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
 entity ULA_32bit is
     port
     (
+	 
+-- portas de entrada
       entradaA, entradaB:  in STD_LOGIC_VECTOR(31 downto 0);
       seletor:  in STD_LOGIC_VECTOR(2 downto 0);
+		
+-- portas de saída
       resultado: out STD_LOGIC_VECTOR(31 downto 0);
 		ZERO : out STD_LOGIC
     );
 end entity;
 
 architecture comportamento of ULA_32bit is
+
+	 -- constante com valor 0
 	 constant valorZero : std_logic_vector(31 downto 0) := (others => '0');
+	 
+	 -- instancia o tamanho dos sinais
 	 signal Cout: std_logic_vector(31 downto 0);
 	 signal slt : std_logic_vector(31 downto 0);
 	 signal V   : std_logic; 
@@ -25,21 +35,33 @@ architecture comportamento of ULA_32bit is
 
     begin
 	 
+	 -- possíveis valores do seletor
 	 seletor_1bit <= "00" when seletor = "000" else
 	 "01" when seletor = "001" else
 	 "10" when seletor = "010" or seletor = "110" or seletor = "111" else
 	 "11";
-		
+	
+	 -- possíveis valores da entrada B
 	 sigEntradaB <= std_logic_vector(unsigned(not(entradaB)) + 1) when seletor = "110" or seletor = "111" else
 						entradaB;
+						
+	 -- valor imediato
 	 imedShift <= entradaB(15 downto 0) & x"0000";
 	 
-	 V   <= Cout(30) xor Cout(31); --(not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
+	 -- V = (not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
+	 V   <= Cout(30) xor Cout(31); 
+	 
+	 -- seletor
 	 slt <= "0000000000000000000000000000000" & (saida(31) xor V);
+	 
+	 -- resultado
 	 resultado <= slt when seletor = "111" else 
 	 imedShift when seletor = "100" else saida;
+	 
+	 -- flag zero
 	 ZERO <= '1' when unsigned(saida) = unsigned(valorZero) else '0';
 	 
+--  ULA 0
 	 ULA0 : entity work.ULA_1bit 
 		port map (
 			entradaA => entradaA(0) ,
@@ -50,6 +72,7 @@ architecture comportamento of ULA_32bit is
 			Cout => Cout(0)
 	      );
 			
+--  ULA 1
     ULA1 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(1) ,
@@ -59,6 +82,8 @@ architecture comportamento of ULA_32bit is
 					saida => saida(1),
 					Cout => Cout(1)		
 				);	
+				
+--  ULA 2
     ULA2 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(2) ,
@@ -69,6 +94,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(2)		
 				);	
 				
+--  ULA 3
     ULA3 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(3) ,
@@ -78,6 +104,8 @@ architecture comportamento of ULA_32bit is
 					saida => saida(3),
 					Cout => Cout(3)		
 				);	
+
+--  ULA 4
     ULA4 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(4) ,
@@ -88,6 +116,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(4)		
 				);	
 				
+--  ULA 5
     ULA5 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(5) ,
@@ -98,6 +127,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(5)		
 				);					
 				
+--  ULA 6
     ULA6 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(6) ,
@@ -108,6 +138,8 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(6)		
 				);	
 
+				
+--  ULA 7
     ULA7 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(7) ,
@@ -118,6 +150,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(7)		
 				);	
 
+--  ULA 8
     ULA8 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(8) ,
@@ -128,6 +161,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(8)		
 				);	
 
+--  ULA 9
     ULA9 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(9) ,
@@ -138,6 +172,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(9)		
 				);	
 
+--  ULA 10
     ULA10 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(10) ,
@@ -148,6 +183,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(10)		
 				);	
 
+--  ULA 11
     ULA11 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(11) ,
@@ -158,6 +194,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(11)		
 				);	
 
+--  ULA 12
     ULA12 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(12) ,
@@ -168,6 +205,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(12)		
 				);	
 
+--  ULA 13
     ULA13 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(13) ,
@@ -178,6 +216,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(13)		
 				);	
 
+--  ULA 14
     ULA14 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(14) ,
@@ -188,6 +227,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(14)		
 				);	
 
+--  ULA 15
     ULA15 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(15) ,
@@ -198,6 +238,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(15)		
 				);	
 
+--  ULA 16
     ULA16 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(16) ,
@@ -208,6 +249,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(16)		
 				);	
 
+--  ULA 17
     ULA17 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(17) ,
@@ -218,6 +260,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(17)		
 				);	
 
+--  ULA 18
     ULA18 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(18) ,
@@ -227,6 +270,8 @@ architecture comportamento of ULA_32bit is
 					saida => saida(18),
 					Cout => Cout(18)		
 				);	
+				
+--  ULA 19
     ULA19 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(19) ,
@@ -237,6 +282,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(19)		
 				);	
 
+--  ULA 20
     ULA20 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(20) ,
@@ -247,6 +293,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(20)		
 				);	
 
+--  ULA 21
     ULA21 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(21) ,
@@ -257,6 +304,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(21)		
 				);	
 
+--  ULA 22
     ULA22 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(22) ,
@@ -267,6 +315,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(22)		
 				);	
 
+--  ULA 23
     ULA23 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(23) ,
@@ -277,6 +326,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(23)		
 				);	
 
+--  ULA 24
     ULA24 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(24) ,
@@ -287,6 +337,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(24)		
 				);	
 
+--  ULA 25
     ULA25 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(25) ,
@@ -297,6 +348,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(25)		
 				);	
 
+--  ULA 26
     ULA26 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(26) ,
@@ -306,6 +358,8 @@ architecture comportamento of ULA_32bit is
 					saida => saida(26),
 					Cout => Cout(26)		
 				);	
+
+--  ULA 27
     ULA27 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(27) ,
@@ -316,6 +370,7 @@ architecture comportamento of ULA_32bit is
 					Cout => Cout(27)		
 				);					
 				
+--  ULA 28
     ULA28 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(28) ,
@@ -324,7 +379,9 @@ architecture comportamento of ULA_32bit is
 					seletor => seletor_1bit,
 					saida => saida(28),
 					Cout => Cout(28)		
-				);		
+				);	
+				
+--  ULA 29
     ULA29 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(29) ,
@@ -333,7 +390,9 @@ architecture comportamento of ULA_32bit is
 					seletor => seletor_1bit,
 					saida => saida(29),
 					Cout => Cout(29)		
-				);		
+				);	
+				
+--  ULA 30
     ULA30 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(30) ,
@@ -342,7 +401,9 @@ architecture comportamento of ULA_32bit is
 					seletor => seletor_1bit,
 					saida => saida(30),
 					Cout => Cout(30)		
-				);		
+				);	
+				
+--  ULA 31
     ULA31 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(31) ,
@@ -352,8 +413,5 @@ architecture comportamento of ULA_32bit is
 					saida => saida(31),
 					Cout => Cout(31)		
 				);	
-			
-			
-	
 					
 end architecture;
