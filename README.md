@@ -4,7 +4,7 @@ Beatriz Mie Kotsubo Kuwabara, Gabriela Iannini Caruso e Luiza Rodrigues Silveira
 
 ## Manual de utilização dos botões e switches da placa DE0-CV
 
-Os valores de saída mostrados no display são controlados pelos Switches `SW0` e `SW1`:
+Os valores de saída mostrados no display são controlados pelos Switch `SW0`:
 
 - Switch 00 : Saída do PC
 - Switch 01 : Saída da ULA
