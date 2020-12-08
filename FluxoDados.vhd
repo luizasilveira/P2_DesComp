@@ -25,7 +25,7 @@ end entity;
 
 architecture comportamento of FluxoDados is
 
-
+-- Sinais 
 	SIGNAL PC_OUT : std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL Instrucao : std_logic_vector(addrWidth-1 downto 0);
 	SIGNAL ULAentradaA : std_logic_vector(addrWidth-1 downto 0);
@@ -45,7 +45,7 @@ architecture comportamento of FluxoDados is
 	signal ulaop : std_logic_vector(2 downto 0);
 	signal operacao 		: std_logic_vector(2 downto 0);
 	
-	
+-- Pontos de controle 	
 	alias mux_pc    		: std_logic is palavraControle(0);
 	alias mux_RtRd			: std_logic is palavraControle(1);
 	alias escritaReg	 	: std_logic is palavraControle(2);
@@ -55,6 +55,7 @@ architecture comportamento of FluxoDados is
 	alias leituraMem		: std_logic is palavraControle(6);
 	alias escritaMem		: std_logic is palavraControle(7);  
 	
+-- Instruções	
 	alias opCode   : std_logic_vector(5 downto 0) is Instrucao(31 downto 26); -- opcode [31-26]
 	alias rs   		: std_logic_vector(4 DOWNTO 0) is Instrucao(25 DOWNTO 21); -- regA   [25-21]
 	alias rt   		: std_logic_vector(4 DOWNTO 0) is Instrucao(20 DOWNTO 16); -- regB   [20-16]
@@ -65,7 +66,7 @@ architecture comportamento of FluxoDados is
    alias imedJ  : STD_LOGIC_VECTOR(25 DOWNTO 0) IS instrucao(25 DOWNTO 0);
 	begin
 	
-	-- ROM	
+-- ROM - Memoria de instruções
 	ROM: entity work.ROMMIPS generic map (addrWidth => addrWidth, dataWidth => dataWidth )
            port map (
 					clk => clk,
@@ -73,7 +74,7 @@ architecture comportamento of FluxoDados is
 					Dado => Instrucao
 			  );
 		
-	-- program counter
+-- Program counter
 	PC: entity work.registradorGenerico 
 			generic map(
 				larguraDados  => addrWidth
@@ -86,13 +87,14 @@ architecture comportamento of FluxoDados is
 					RST => '0'
 			 );
 			
-	-- incrementa 1		
+-- Soma com 1		
 	inc: entity work.somaConstante
             port map (
 					entrada => PC_Out,
 					saida => inc_out
 				);
 				
+-- Banco de registradores				
 	Registradores : entity work.bancoRegistradores
 				 generic map (
 					 larguraDados => dataWidth,
@@ -108,7 +110,8 @@ architecture comportamento of FluxoDados is
 					 saidaA => ULAentradaA,
 					 saidaB => mux_ula_in -- barramento de escrita de dados
 			);
-
+			
+-- ULA de 32 Bits
 	ULA32 : entity work.ULA_32bit 
 				port map (
 					entradaA => ULAentradaA,
@@ -116,21 +119,25 @@ architecture comportamento of FluxoDados is
 					resultado => ULA_OUT, -- barramento de endereço
 					seletor => operacao,
 					ZERO => flag_zero
-				);					
+				);		
+				
+-- Unidade de controle do fluxo de dados				
 	UC: entity work.UnidadeControle
 		 port map (
 				opCode => opCode,
 				ULAop => ulaop,
 				palavraControle => palavraControle
 		 );
-
+		 
+-- Unidade de controle da ULA
 	UC_ULA: entity work.UnidadeControleULA
 		 port map (
 				func => func,
 				ULAop => ulaop,
 				ULActrl => operacao
-		 );		 
-
+		 );	
+		 
+-- Mux PC
 	MUXPC: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
@@ -141,7 +148,7 @@ architecture comportamento of FluxoDados is
 					seletor_MUX  => mux_pc,
 					saida_MUX  => mux_pc_out
 		  	  );
-			  
+-- Mux Rt/Rd			  
 	MUXRtRd: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => 5
@@ -153,6 +160,7 @@ architecture comportamento of FluxoDados is
 					saida_MUX  => mux_reg_out
 		  	  );
 			  
+-- Mux Rt/Imediato			  
 	MUXRtImed: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
@@ -164,7 +172,7 @@ architecture comportamento of FluxoDados is
 					saida_MUX  => mux_ula_out
 		  	  );
 			  
-
+-- Estende um sinal generico
 	EstSinal: entity work.estendeSinalGenerico
 		  generic map (
 				larguraDadoEntrada => 16,
@@ -174,8 +182,9 @@ architecture comportamento of FluxoDados is
 				estendeSinal_IN => imedI,
 				estendeSinal_OUT => estende_out 
 
-		  );			  
-
+		  );	
+		  
+-- Somador generico
 	soma: entity work.somadorGenerico
 			 generic map (
 					larguraDados => addrWidth
@@ -186,6 +195,7 @@ architecture comportamento of FluxoDados is
 			saida => soma_out
 		);
 		
+-- Mux BEQ		
 	MUX_BEQ: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
@@ -196,6 +206,7 @@ architecture comportamento of FluxoDados is
 					seletor_MUX  => sel_beq and flag_zero,
 					saida_MUX  => mux_BEQ_out
 		  	  );
+-- Mux ULA/Mem			  
 	MUXUlaMem: entity work.muxGenerico2x1
 			  generic map (
 					larguraDados => addrWidth
@@ -206,7 +217,8 @@ architecture comportamento of FluxoDados is
 					seletor_MUX  => mux_ULAMem,
 					saida_MUX  => mux_ULAMem_out
 		  	  );
-			 
+			  
+-- RAM - Memoria de dados			 
 	RAM: entity work.RAMMIPS 
 			generic map(
 				dataWidth  => addrWidth,
@@ -220,7 +232,7 @@ architecture comportamento of FluxoDados is
 					we => escritaMem
 			 );			 
 		  
-			 
+-- Saídas de teste			 
 	saida_ULA <= ULA_OUT;
 	saida_pc <= PC_Out;
 

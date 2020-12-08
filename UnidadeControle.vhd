@@ -5,21 +5,22 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity UnidadeControle is
+
   port   (
-  
--- porta de entrada
+--  porta de entrada
 	 opCode  			:  in  std_logic_vector(5 downto 0);
 	 
--- portas de saída
+--  portas de saída
     palavraControle  :  out std_logic_vector(7 downto 0);
 	 ULAop 				:  out std_logic_vector(2 downto 0)
   );
+  
 end entity;
 
 
 architecture arch_name of UnidadeControle is
 
-	-- Pontos de controle
+-- Pontos de controle
 	alias mux_pc    		: std_logic is palavraControle(0);
 	alias mux_RtRd			: std_logic is palavraControle(1);
 	alias escritaReg	 	: std_logic is palavraControle(2);
@@ -30,24 +31,24 @@ architecture arch_name of UnidadeControle is
 	alias escritaMem		: std_logic is palavraControle(7);  
 
 
-	-- tipos das instruções
+-- tipos das instruções
 	
-	-- instruções tipo R                                 opCode
+-- instruções tipo R                                    opCode
 	constant tipoR		: std_logic_vector(5 downto 0) := "000000";
-	-- add  
-	-- sub 
-	-- or	
-	-- and	
-	-- slt
+-- add  
+-- sub 
+-- or	
+-- and	
+-- slt
 	
-	-- instruções tipo I                                 opCode
+-- instruções tipo I                                    opCode
 	constant lw 		: std_logic_vector(5 downto 0) := "100011";
 	constant sw			: std_logic_vector(5 downto 0) := "101011";
 	constant beq		: std_logic_vector(5 downto 0) := "000100";
 	constant ori		: std_logic_vector(5 downto 0) := "001101";
 	constant lui		: std_logic_vector(5 downto 0) := "001111";
 	
-	-- instruções tipo J                                 opCode
+-- instruções tipo J                                    opCode
 	constant jmp		: std_logic_vector(5 downto 0) := "000010";
 
 	

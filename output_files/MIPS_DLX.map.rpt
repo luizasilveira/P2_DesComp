@@ -1,5 +1,5 @@
 Analysis & Synthesis report for MIPS_DLX
-Mon Dec 07 14:57:02 2020
+Tue Dec 08 03:16:01 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -17,35 +17,34 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   9. Removed Registers Triggering Further Register Optimizations
  10. General Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_DLX
- 13. Parameter Settings for User Entity Instance: FluxoDados:FD
- 14. Parameter Settings for User Entity Instance: FluxoDados:FD|ROMMIPS:ROM
- 15. Parameter Settings for User Entity Instance: FluxoDados:FD|registradorGenerico:PC
- 16. Parameter Settings for User Entity Instance: FluxoDados:FD|somaConstante:inc
- 17. Parameter Settings for User Entity Instance: FluxoDados:FD|bancoRegistradores:Registradores
- 18. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXPC
- 19. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXRtRd
- 20. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXRtImed
- 21. Parameter Settings for User Entity Instance: FluxoDados:FD|estendeSinalGenerico:EstSinal
- 22. Parameter Settings for User Entity Instance: FluxoDados:FD|somadorGenerico:soma
- 23. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUX_BEQ
- 24. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXUlaMem
- 25. Parameter Settings for User Entity Instance: FluxoDados:FD|RAMMIPS:RAM
- 26. Port Connectivity Checks: "conversorHex7Seg:hex_5"
- 27. Port Connectivity Checks: "conversorHex7Seg:hex_4"
- 28. Port Connectivity Checks: "conversorHex7Seg:hex_3"
- 29. Port Connectivity Checks: "conversorHex7Seg:hex_2"
- 30. Port Connectivity Checks: "conversorHex7Seg:hex_1"
- 31. Port Connectivity Checks: "conversorHex7Seg:hex_0"
- 32. Port Connectivity Checks: "FluxoDados:FD|somadorGenerico:soma"
- 33. Port Connectivity Checks: "FluxoDados:FD|muxGenerico2x1:MUXPC"
- 34. Port Connectivity Checks: "FluxoDados:FD|UnidadeControle:UC"
- 35. Port Connectivity Checks: "FluxoDados:FD|ULA_32bit:ULA32|ULA_1bit:ULA0"
- 36. Port Connectivity Checks: "FluxoDados:FD|registradorGenerico:PC"
- 37. Port Connectivity Checks: "FluxoDados:FD"
- 38. Post-Synthesis Netlist Statistics for Top Partition
- 39. Elapsed Time Per Partition
- 40. Analysis & Synthesis Messages
+ 12. Parameter Settings for User Entity Instance: FluxoDados:FD
+ 13. Parameter Settings for User Entity Instance: FluxoDados:FD|ROMMIPS:ROM
+ 14. Parameter Settings for User Entity Instance: FluxoDados:FD|registradorGenerico:PC
+ 15. Parameter Settings for User Entity Instance: FluxoDados:FD|somaConstante:inc
+ 16. Parameter Settings for User Entity Instance: FluxoDados:FD|bancoRegistradores:Registradores
+ 17. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXPC
+ 18. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXRtRd
+ 19. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXRtImed
+ 20. Parameter Settings for User Entity Instance: FluxoDados:FD|estendeSinalGenerico:EstSinal
+ 21. Parameter Settings for User Entity Instance: FluxoDados:FD|somadorGenerico:soma
+ 22. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUX_BEQ
+ 23. Parameter Settings for User Entity Instance: FluxoDados:FD|muxGenerico2x1:MUXUlaMem
+ 24. Parameter Settings for User Entity Instance: FluxoDados:FD|RAMMIPS:RAM
+ 25. Port Connectivity Checks: "conversorHex7Seg:hex_5"
+ 26. Port Connectivity Checks: "conversorHex7Seg:hex_4"
+ 27. Port Connectivity Checks: "conversorHex7Seg:hex_3"
+ 28. Port Connectivity Checks: "conversorHex7Seg:hex_2"
+ 29. Port Connectivity Checks: "conversorHex7Seg:hex_1"
+ 30. Port Connectivity Checks: "conversorHex7Seg:hex_0"
+ 31. Port Connectivity Checks: "FluxoDados:FD|somadorGenerico:soma"
+ 32. Port Connectivity Checks: "FluxoDados:FD|muxGenerico2x1:MUXPC"
+ 33. Port Connectivity Checks: "FluxoDados:FD|UnidadeControle:UC"
+ 34. Port Connectivity Checks: "FluxoDados:FD|ULA_32bit:ULA32|ULA_1bit:ULA0"
+ 35. Port Connectivity Checks: "FluxoDados:FD|registradorGenerico:PC"
+ 36. Port Connectivity Checks: "FluxoDados:FD"
+ 37. Post-Synthesis Netlist Statistics for Top Partition
+ 38. Elapsed Time Per Partition
+ 39. Analysis & Synthesis Messages
 
 
 
@@ -72,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Dec 07 14:57:01 2020       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 08 03:16:01 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; MIPS_DLX                                    ;
 ; Top-level Entity Name           ; MIPS_DLX                                    ;
@@ -194,7 +193,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -1289,17 +1288,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |MIPS_DLX ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; DATA_WIDTH     ; 32    ; Signed Integer                                  ;
-; ADDR_WIDTH     ; 32    ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: FluxoDados:FD ;
 +---------------------+-------+------------------------------+
@@ -1596,7 +1584,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:11     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1606,24 +1594,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 07 14:56:28 2020
+    Info: Processing started: Tue Dec 08 03:15:38 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MIPS_DLX -c MIPS_DLX
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
-    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 30
-    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 7
+    Info (12022): Found design unit 1: bancoRegistradores-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 36
+    Info (12023): Found entity 1: bancoRegistradores File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file rommips.vhd
-    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 17
-    Info (12023): Found entity 1: ROMMIPS File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: ROMMIPS-assincrona File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 21
+    Info (12023): Found entity 1: ROMMIPS File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file rammips.vhd
-    Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 18
-    Info (12023): Found entity 1: RAMMIPS File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 5
+    Info (12022): Found design unit 1: RAMMIPS-assincrona File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 23
+    Info (12023): Found entity 1: RAMMIPS File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
     Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA.vhd Line: 19
     Info (12023): Found entity 1: ULA File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd Line: 18
-    Info (12023): Found entity 1: somaConstante File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd Line: 5
+    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd Line: 24
+    Info (12023): Found entity 1: somaConstante File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somaConstante.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
     Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/registradorGenerico.vhd Line: 26
     Info (12023): Found entity 1: registradorGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/registradorGenerico.vhd Line: 6
@@ -1631,26 +1619,26 @@ Info (12021): Found 2 design units, including 1 entities, in source file fluxoda
     Info (12022): Found design unit 1: FluxoDados-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 26
     Info (12023): Found entity 1: FluxoDados File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file unidadecontrole.vhd
-    Info (12022): Found design unit 1: UnidadeControle-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd Line: 15
-    Info (12023): Found entity 1: UnidadeControle File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd Line: 5
+    Info (12022): Found design unit 1: UnidadeControle-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd Line: 21
+    Info (12023): Found entity 1: UnidadeControle File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControle.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file estendesinalgenerico.vhd
-    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd Line: 17
-    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd Line: 4
+    Info (12022): Found design unit 1: estendeSinalGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd Line: 21
+    Info (12023): Found entity 1: estendeSinalGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/estendeSinalGenerico.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd Line: 17
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd Line: 5
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd Line: 21
+    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/muxGenerico2x1.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file somadorgenerico.vhd
-    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd Line: 15
-    Info (12023): Found entity 1: somadorGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd Line: 5
+    Info (12022): Found design unit 1: somadorGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd Line: 22
+    Info (12023): Found entity 1: somadorGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/somadorGenerico.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ula_1bit.vhd
-    Info (12022): Found design unit 1: ULA_1bit-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_1bit.vhd Line: 14
-    Info (12023): Found entity 1: ULA_1bit File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_1bit.vhd Line: 5
+    Info (12022): Found design unit 1: ULA_1bit-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_1bit.vhd Line: 20
+    Info (12023): Found entity 1: ULA_1bit File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_1bit.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ula_32bit.vhd
-    Info (12022): Found design unit 1: ULA_32bit-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 15
-    Info (12023): Found entity 1: ULA_32bit File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 5
+    Info (12022): Found design unit 1: ULA_32bit-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 20
+    Info (12023): Found entity 1: ULA_32bit File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file unidadecontroleula.vhd
-    Info (12022): Found design unit 1: UnidadeControleULA-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControleULA.vhd Line: 14
-    Info (12023): Found entity 1: UnidadeControleULA File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControleULA.vhd Line: 5
+    Info (12022): Found design unit 1: UnidadeControleULA-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControleULA.vhd Line: 19
+    Info (12023): Found entity 1: UnidadeControleULA File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/UnidadeControleULA.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
     Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/conversorHex7Seg.vhd Line: 18
     Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/conversorHex7Seg.vhd Line: 5
@@ -1659,30 +1647,30 @@ Info (12021): Found 3 design units, including 1 entities, in source file edgedet
     Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/edgeDetector.vhd Line: 39
     Info (12023): Found entity 1: edgeDetector File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/edgeDetector.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file mips_dlx.vhd
-    Info (12022): Found design unit 1: MIPS_DLX-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 22
+    Info (12022): Found design unit 1: MIPS_DLX-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 18
     Info (12023): Found entity 1: MIPS_DLX File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 5
 Info (12127): Elaborating entity "MIPS_DLX" for the top level hierarchy
-Info (12128): Elaborating entity "edgeDetector" for hierarchy "edgeDetector:edge" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 41
-Info (12128): Elaborating entity "FluxoDados" for hierarchy "FluxoDados:FD" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 48
-Info (12128): Elaborating entity "ROMMIPS" for hierarchy "FluxoDados:FD|ROMMIPS:ROM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 69
-Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(20): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 20
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "FluxoDados:FD|registradorGenerico:PC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 77
-Info (12128): Elaborating entity "somaConstante" for hierarchy "FluxoDados:FD|somaConstante:inc" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 90
-Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDados:FD|bancoRegistradores:Registradores" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 96
-Info (12128): Elaborating entity "ULA_32bit" for hierarchy "FluxoDados:FD|ULA_32bit:ULA32" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 112
-Info (12128): Elaborating entity "ULA_1bit" for hierarchy "FluxoDados:FD|ULA_32bit:ULA32|ULA_1bit:ULA0" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 69
-Info (12128): Elaborating entity "UnidadeControle" for hierarchy "FluxoDados:FD|UnidadeControle:UC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 120
-Info (12128): Elaborating entity "UnidadeControleULA" for hierarchy "FluxoDados:FD|UnidadeControleULA:UC_ULA" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 127
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:MUXPC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 134
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:MUXRtRd" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 145
-Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "FluxoDados:FD|estendeSinalGenerico:EstSinal" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 168
-Info (12128): Elaborating entity "somadorGenerico" for hierarchy "FluxoDados:FD|somadorGenerico:soma" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 179
-Info (12128): Elaborating entity "RAMMIPS" for hierarchy "FluxoDados:FD|RAMMIPS:RAM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 210
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:hex_0" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 56
+Info (12128): Elaborating entity "edgeDetector" for hierarchy "edgeDetector:edge" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 35
+Info (12128): Elaborating entity "FluxoDados" for hierarchy "FluxoDados:FD" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 43
+Info (12128): Elaborating entity "ROMMIPS" for hierarchy "FluxoDados:FD|ROMMIPS:ROM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 70
+Warning (10541): VHDL Signal Declaration warning at ROMMIPS.vhd(27): used implicit default value for signal "memROM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 27
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "FluxoDados:FD|registradorGenerico:PC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 78
+Info (12128): Elaborating entity "somaConstante" for hierarchy "FluxoDados:FD|somaConstante:inc" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 91
+Info (12128): Elaborating entity "bancoRegistradores" for hierarchy "FluxoDados:FD|bancoRegistradores:Registradores" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 98
+Info (12128): Elaborating entity "ULA_32bit" for hierarchy "FluxoDados:FD|ULA_32bit:ULA32" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 115
+Info (12128): Elaborating entity "ULA_1bit" for hierarchy "FluxoDados:FD|ULA_32bit:ULA32|ULA_1bit:ULA0" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ULA_32bit.vhd Line: 71
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "FluxoDados:FD|UnidadeControle:UC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 125
+Info (12128): Elaborating entity "UnidadeControleULA" for hierarchy "FluxoDados:FD|UnidadeControleULA:UC_ULA" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 133
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:MUXPC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 141
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "FluxoDados:FD|muxGenerico2x1:MUXRtRd" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 152
+Info (12128): Elaborating entity "estendeSinalGenerico" for hierarchy "FluxoDados:FD|estendeSinalGenerico:EstSinal" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 176
+Info (12128): Elaborating entity "somadorGenerico" for hierarchy "FluxoDados:FD|somadorGenerico:soma" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 188
+Info (12128): Elaborating entity "RAMMIPS" for hierarchy "FluxoDados:FD|RAMMIPS:RAM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/FluxoDados.vhd Line: 222
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "conversorHex7Seg:hex_0" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 51
 Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276007): RAM logic "FluxoDados:FD|RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 21
-    Info (276007): RAM logic "FluxoDados:FD|bancoRegistradores:Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 50
-    Info (276004): RAM logic "FluxoDados:FD|ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 20
+    Info (276007): RAM logic "FluxoDados:FD|RAMMIPS:RAM|memRAM" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/RAMMIPS.vhd Line: 28
+    Info (276007): RAM logic "FluxoDados:FD|bancoRegistradores:Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/bancoRegistradores.vhd Line: 57
+    Info (276004): RAM logic "FluxoDados:FD|ROMMIPS:ROM|memROM" is uninferred due to inappropriate RAM size File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMMIPS.vhd Line: 27
 Warning (113028): 57 out of 64 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMcontent.mif Line: 1
     Warning (113027): Addresses ranging from 7 to 63 are not initialized File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/ROMcontent.mif Line: 1
 Info (286030): Timing-Driven Synthesis is running
@@ -1690,17 +1678,17 @@ Info (17049): 520 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 14
-    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 14
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 10
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/MIPS_DLX.vhd Line: 10
 Info (21057): Implemented 3722 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 74 output pins
     Info (21061): Implemented 3640 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4862 megabytes
-    Info: Processing ended: Mon Dec 07 14:57:02 2020
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Tue Dec 08 03:16:01 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:37
 
 

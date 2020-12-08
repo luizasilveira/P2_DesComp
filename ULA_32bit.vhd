@@ -19,10 +19,10 @@ end entity;
 
 architecture comportamento of ULA_32bit is
 
---  constante com valor 0
+-- constante com valor 0
 	constant valorZero : std_logic_vector(31 downto 0) := (others => '0');
 
---  instancia o tamanho dos sinais
+-- instancia o tamanho dos sinais
 	signal Cout: std_logic_vector(31 downto 0);
 	signal slt : std_logic_vector(31 downto 0);
 	signal V   : std_logic; 
@@ -34,42 +34,40 @@ architecture comportamento of ULA_32bit is
 
     begin
 
---	Função	         Seletor_1bit
+--	Função	          Seletor_1bit
 --	AND	                00(And)
---	OR  ou ORI          01(Or)
+--	OR  ou ORI            01(Or)
 --	ADD ou AND ou 
---	SUB ou BEQ ou SLT   10(Soma ou Sub)
---	LUI                 11	 
+--	SUB ou BEQ ou SLT     10(Soma ou Sub)
+--	LUI                   11	 
 
---  possíveis valores do seletor
+-- Possíveis valores do seletor
 	seletor_1bit <= "00" when seletor = "000" else
 	"01" when seletor = "001" else
 	"10" when seletor = "010" or seletor = "110" or seletor = "111" else
 	"11";
-
+	
+--	Flag Zero 
+	ZERO <= '1' when unsigned(saida) = unsigned(valorZero) else '0';
+	
 --	inverte o sinal da entrada B quando for a intrução Sub, Beq ou slt para fazer uma subtração 	
 	sigEntradaB <= std_logic_vector(unsigned(not(entradaB)) + 1) when seletor = "110" or seletor = "111" else
 					entradaB;
-					
---	imedShift = (imm,16'b0)		
-	imedShift <= entradaB(15 downto 0) & x"0000";
 
 --	OverFlow = Carry out(30) xor Carry out(31)
 	V <= Cout(30) xor Cout(31); --(not(entradaA(31)) and (not(entradaB(31))) and saida(31)) or (entradaA(31) and entradaB(31) and (not(saida(31))));
 
 --	slt = (31'b0, sub[MSB] xor V)
 	slt <= "0000000000000000000000000000000" & (saida(31) xor V);
+						
+--	imedShift = (imm,16'b0)		
+	imedShift <= entradaB(15 downto 0) & x"0000";
+	
+-- Saída da ULA
+	resultado <= slt when seletor = "111" else -- slt quando a intruçao for slt
+	imedShift when seletor = "100" else saida; -- imedShift quando for a instrução LUI
 
---  resultado da Ula = slt quando a intruçao for slt
-	resultado <= slt when seletor = "111" else 
-
---  imedShift quando for a instrução LUI
-	imedShift when seletor = "100" else saida;
-
---	Flag Zero 
-	ZERO <= '1' when unsigned(saida) = unsigned(valorZero) else '0';
-
---  ULA 0
+-- ULA 0
 	ULA0 : entity work.ULA_1bit 
 				port map (
 					entradaA => entradaA(0) ,

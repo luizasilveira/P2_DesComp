@@ -31,6 +31,7 @@ architecture comportamento of conversorHex7Seg is
    --
     signal rascSaida7seg: std_logic_vector(6 downto 0);
 begin
+
     rascSaida7seg <=    "1000000" when dadoHex="0000" else ---0
                             "1111001" when dadoHex="0001" else ---1
                             "0100100" when dadoHex="0010" else ---2
