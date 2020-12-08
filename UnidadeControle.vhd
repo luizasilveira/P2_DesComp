@@ -1,11 +1,16 @@
+-- referências: modelos VHDL da matéria de Design de Computadores - Insper 2020.2 - professor Paulo Santos
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
 entity UnidadeControle is
   port   (
-
+  
+-- porta de entrada
 	 opCode  			:  in  std_logic_vector(5 downto 0);
+	 
+-- portas de saída
     palavraControle  :  out std_logic_vector(7 downto 0);
 	 ULAop 				:  out std_logic_vector(2 downto 0)
   );
