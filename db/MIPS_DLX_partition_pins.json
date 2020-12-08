@@ -4,251 +4,315 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "saida_ULA[0]",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[1]",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[2]",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[3]",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[4]",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[5]",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[6]",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[7]",
+					"name" : "HEX1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[8]",
+					"name" : "HEX1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[9]",
+					"name" : "HEX1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[10]",
+					"name" : "HEX1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[11]",
+					"name" : "HEX1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[12]",
+					"name" : "HEX1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[13]",
+					"name" : "HEX1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[14]",
+					"name" : "HEX2[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[15]",
+					"name" : "HEX2[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[16]",
+					"name" : "HEX2[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[17]",
+					"name" : "HEX2[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[18]",
+					"name" : "HEX2[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[19]",
+					"name" : "HEX2[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[20]",
+					"name" : "HEX2[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[21]",
+					"name" : "HEX3[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[22]",
+					"name" : "HEX3[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[23]",
+					"name" : "HEX3[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[24]",
+					"name" : "HEX3[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[25]",
+					"name" : "HEX3[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[26]",
+					"name" : "HEX3[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[27]",
+					"name" : "HEX3[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[28]",
+					"name" : "HEX4[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[29]",
+					"name" : "HEX4[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[30]",
+					"name" : "HEX4[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_ULA[31]",
+					"name" : "HEX4[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[2]",
+					"name" : "HEX4[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[3]",
+					"name" : "HEX4[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[4]",
+					"name" : "HEX4[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[5]",
+					"name" : "HEX5[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[6]",
+					"name" : "HEX5[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[7]",
+					"name" : "HEX5[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[8]",
+					"name" : "HEX5[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[9]",
+					"name" : "HEX5[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[10]",
+					"name" : "HEX5[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[11]",
+					"name" : "HEX5[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[12]",
+					"name" : "barramentoEndout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[13]",
+					"name" : "barramentoEndout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[14]",
+					"name" : "barramentoEndout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[15]",
+					"name" : "barramentoEndout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[16]",
+					"name" : "barramentoEndout[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[17]",
+					"name" : "barramentoEndout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[18]",
+					"name" : "barramentoEndout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[19]",
+					"name" : "barramentoEndout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[20]",
+					"name" : "barramentoEndout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[21]",
+					"name" : "barramentoEndout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[22]",
+					"name" : "barramentoEndout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[23]",
+					"name" : "barramentoEndout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[24]",
+					"name" : "barramentoEndout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[25]",
+					"name" : "barramentoEndout[13]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[26]",
+					"name" : "barramentoEndout[14]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[27]",
+					"name" : "barramentoEndout[15]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[28]",
+					"name" : "barramentoEndout[16]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[29]",
+					"name" : "barramentoEndout[17]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[30]",
+					"name" : "barramentoEndout[18]",
 					"strict" : false
 				},
 				{
-					"name" : "saida_pc[31]",
+					"name" : "barramentoEndout[19]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[20]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[21]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[22]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[23]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[24]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[25]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[26]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[27]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[28]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[29]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[30]",
+					"strict" : false
+				},
+				{
+					"name" : "barramentoEndout[31]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
 					"strict" : false
 				},
 				{

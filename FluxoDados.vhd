@@ -15,7 +15,7 @@ entity FluxoDados is
 	 
     port (
 		-- portas de entrada
-      CLOCK_50: in std_logic;
+      clk      : in std_logic;
 		saida_ULA: out STD_LOGIC_VECTOR(dataWidth-1 downto 0);
 		saida_pc : out std_logic_vector((dataWidth -1) downto 0)
     );
@@ -68,7 +68,7 @@ architecture comportamento of FluxoDados is
 	-- ROM	
 	ROM: entity work.ROMMIPS generic map (addrWidth => addrWidth, dataWidth => dataWidth )
            port map (
-					clk => CLOCK_50,
+					clk => clk,
 					Endereco => PC_OUT,
 					Dado => Instrucao
 			  );
@@ -79,7 +79,7 @@ architecture comportamento of FluxoDados is
 				larguraDados  => addrWidth
 			)
           port map (
-					clk => CLOCK_50,
+					clk => clk,
 					DIN => mux_pc_out,
 					DOUT => PC_Out,
 					ENABLE => '1',
@@ -99,21 +99,21 @@ architecture comportamento of FluxoDados is
 					 larguraEndBancoRegs => larguraEndBancoRegs
 				 )
 				 port map ( 
-					 clk => CLOCK_50,
+					 clk => clk,
 					 enderecoA => rs,
 					 enderecoB => rt,
 					 enderecoC => mux_reg_out,
 					 dadoEscritaC => mux_ULAMem_out,
 					 escreveC => escritaReg, 
 					 saidaA => ULAentradaA,
-					 saidaB => mux_ula_in
+					 saidaB => mux_ula_in -- barramento de escrita de dados
 			);
 
 	ULA32 : entity work.ULA_32bit 
 				port map (
 					entradaA => ULAentradaA,
 					entradaB => mux_ula_out,
-					resultado => ULA_OUT,
+					resultado => ULA_OUT, -- barramento de endereço
 					seletor => operacao,
 					ZERO => flag_zero
 				);					
@@ -213,10 +213,10 @@ architecture comportamento of FluxoDados is
 				addrWidth  => addrWidth
 			)
           port map (
-					clk => CLOCK_50,
+					clk => clk,
 					Endereco => ULA_OUT,
 					Dado_in => mux_ula_in,
-					Dado_out => mem_out,
+					Dado_out => mem_out, --baramento de leitura de dados
 					we => escritaMem
 			 );			 
 		  

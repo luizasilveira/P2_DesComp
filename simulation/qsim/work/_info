@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P2_DesComp/simulation/qsim
 Efluxodados
-Z0 w1607292006
+Z0 w1607295187
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,24 +20,24 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 116
+!i122 118
 Z10 dC:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P2_DesComp/simulation/qsim
 Z11 8MIPS_DLX.vho
 Z12 FMIPS_DLX.vho
 l0
-L39 1
+Z13 L39 1
 VB9;d_D^IPjVCUOC4NHUU20
 !s100 g?0F]F[UGi2:;L]OBKTNG2
-Z13 OV;C;2020.1;71
+Z14 OV;C;2020.1;71
 32
-Z14 !s110 1607292009
+Z15 !s110 1607295190
 !i10b 1
-Z15 !s108 1607292008.000000
-Z16 !s90 -work|work|MIPS_DLX.vho|
-Z17 !s107 MIPS_DLX.vho|
+Z16 !s108 1607295189.000000
+Z17 !s90 -work|work|MIPS_DLX.vho|
+Z18 !s107 MIPS_DLX.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
 Astructure
 R1
 R2
@@ -49,64 +49,160 @@ R7
 R8
 R9
 DEx4 work 10 fluxodados 0 22 B9;d_D^IPjVCUOC4NHUU20
-!i122 116
+!i122 118
 l6990
 L47 66774
 V<kiB[BAHlFU_MAWkbnnm73
 !s100 QAe1ihJQ0PBCk5=iI5R0?2
-R13
-32
 R14
-!i10b 1
+32
 R15
+!i10b 1
 R16
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Efluxodados_vhd_vec_tst
-Z20 w1607292003
+Z21 w1607295185
 R7
 R8
-!i122 117
+!i122 119
 R10
-Z21 8Waveform4.vwf.vht
-Z22 FWaveform4.vwf.vht
+Z22 8Waveform4.vwf.vht
+Z23 FWaveform4.vwf.vht
 l0
-Z23 L32 1
+Z24 L32 1
 V?]l9QY9:HKLo_1oeO6]2T3
 !s100 h3VBEdKO>m;NL9aUb==e53
-R13
+R14
 32
-Z24 !s110 1607292011
+Z25 !s110 1607295192
 !i10b 1
-Z25 !s108 1607292011.000000
-Z26 !s90 -work|work|Waveform4.vwf.vht|
-Z27 !s107 Waveform4.vwf.vht|
+Z26 !s108 1607295192.000000
+Z27 !s90 -work|work|Waveform4.vwf.vht|
+Z28 !s107 Waveform4.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Afluxodados_arch
 R7
 R8
-Z28 DEx4 work 22 fluxodados_vhd_vec_tst 0 22 ?]l9QY9:HKLo_1oeO6]2T3
-!i122 117
+DEx4 work 22 fluxodados_vhd_vec_tst 0 22 ?]l9QY9:HKLo_1oeO6]2T3
+!i122 119
 l47
-Z29 L34 34
-Z30 VJYh^FXGEX^T?k:B2kEjSD3
-Z31 !s100 SKM]d7Y_=ldoHC3d>^Pn_0
-R13
+L34 34
+VJYh^FXGEX^T?k:B2kEjSD3
+!s100 SKM]d7Y_=ldoHC3d>^Pn_0
+R14
 32
-R24
-!i10b 1
 R25
+!i10b 1
 R26
 R27
+R28
 !i113 1
-R18
 R19
+R20
+Emips_dlx
+Z29 w1607347274
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+!i122 120
+R10
+R11
+R12
+l0
+R13
+V?Xm1Nk>CWo3h@``0V54262
+!s100 _A_=@aPlOJAc5bKRjTa822
+R14
+32
+!s110 1607347279
+!i10b 1
+Z30 !s108 1607347278.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 8 mips_dlx 0 22 ?Xm1Nk>CWo3h@``0V54262
+!i122 120
+l7220
+L54 69777
+VMMe4:GSOLM35Y;]@j]7NG0
+!s100 Ke]Ag_SkD^F=cOzj:Y0bU0
+R14
+32
+!s110 1607347280
+!i10b 1
+R30
+R17
+R18
+!i113 1
+R19
+R20
+Emips_dlx_vhd_vec_tst
+Z31 w1607347270
+R7
+R8
+!i122 121
+R10
+R22
+R23
+l0
+R24
+V>J?]KC0Bo76b]`<__8E_B2
+!s100 6UPGO6nl7ah3lbj@5E@1n1
+R14
+32
+Z32 !s110 1607347282
+!i10b 1
+Z33 !s108 1607347281.000000
+R27
+R28
+!i113 1
+R19
+R20
+Amips_dlx_arch
+R7
+R8
+DEx4 work 20 mips_dlx_vhd_vec_tst 0 22 >J?]KC0Bo76b]`<__8E_B2
+!i122 121
+l61
+L34 97
+V>FMY@eAgNJ79eVVcP]8jM2
+!s100 gXZfGifm@YRjd_UiOo0_z0
+R14
+32
+R32
+!i10b 1
+R33
+R27
+R28
+!i113 1
+R19
+R20
 Eula_32bit
-Z32 w1605818443
+Z34 w1605818443
 R4
 R1
 R6
@@ -122,16 +218,16 @@ l0
 L37 1
 VEbXL3P`CXVjaLRgZW1d4>2
 !s100 j[G8F6e3W1]kSozj`Aa<k2
-R13
+R14
 32
-Z33 !s110 1605818445
+Z35 !s110 1605818445
 !i10b 1
-Z34 !s108 1605818445.000000
-R16
+Z36 !s108 1605818445.000000
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Astructure
 R4
 R1
@@ -146,38 +242,38 @@ l678
 L47 6084
 VPEg<G`CfQlQi>Q?O`fh`H3
 !s100 7nY2bE4l>9V0Yi;39L=J40
-R13
+R14
 32
-R33
+R35
 !i10b 1
-R34
-R16
+R36
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Eula_32bit_vhd_vec_tst
-Z35 w1605818441
+Z37 w1605818441
 R7
 R8
 !i122 55
 R10
-Z36 8Waveform5.vwf.vht
-Z37 FWaveform5.vwf.vht
+Z38 8Waveform5.vwf.vht
+Z39 FWaveform5.vwf.vht
 l0
-R23
+R24
 VdRZ`o79il9;_m?ffJLf]B1
 !s100 R`kFX8QRSNdRV;[KGmR4;1
-R13
+R14
 32
-R33
+R35
 !i10b 1
-R34
-Z38 !s90 -work|work|Waveform5.vwf.vht|
-Z39 !s107 Waveform5.vwf.vht|
+R36
+Z40 !s90 -work|work|Waveform5.vwf.vht|
+Z41 !s107 Waveform5.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Aula_32bit_arch
 R7
 R8
@@ -187,13 +283,13 @@ l51
 L34 446
 V[?:0YiQ0g5LB^KFdT23BR1
 !s100 m@QTMGg][[knegNz]Nmo72
-R13
+R14
 32
-R33
+R35
 !i10b 1
-R34
-R38
-R39
+R36
+R40
+R41
 !i113 1
-R18
 R19
+R20
