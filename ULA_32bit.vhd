@@ -19,29 +19,29 @@ end entity;
 
 architecture comportamento of ULA_32bit is
 
-	 -- constante com valor 0
-	 constant valorZero : std_logic_vector(31 downto 0) := (others => '0');
-	 
-	 -- instancia o tamanho dos sinais
-	 signal Cout: std_logic_vector(31 downto 0);
-	 signal slt : std_logic_vector(31 downto 0);
-	 signal V   : std_logic; 
-	 signal saida: std_logic_vector(31 downto 0);
-	 signal seletor_1bit: std_logic_vector(1 downto 0);
-	 signal sigEntradaB : std_logic_vector(31 downto 0);
-	 signal imedShift : std_logic_vector(31 downto 0); 
+--  constante com valor 0
+	constant valorZero : std_logic_vector(31 downto 0) := (others => '0');
+
+--  instancia o tamanho dos sinais
+	signal Cout: std_logic_vector(31 downto 0);
+	signal slt : std_logic_vector(31 downto 0);
+	signal V   : std_logic; 
+	signal saida: std_logic_vector(31 downto 0);
+	signal seletor_1bit: std_logic_vector(1 downto 0);
+	signal sigEntradaB : std_logic_vector(31 downto 0);
+	signal imedShift : std_logic_vector(31 downto 0); 
 	 
 
     begin
 
-	--Função	        Seletor_1bit
-	--AND	               00(And)
-	--OR  ou ORI           01(Or)
-	--ADD ou AND ou 
-	--SUB ou BEQ ou SLT    10(Soma ou Sub)
-	--LUI                  11	 
+--	Função	         Seletor_1bit
+--	AND	                00(And)
+--	OR  ou ORI          01(Or)
+--	ADD ou AND ou 
+--	SUB ou BEQ ou SLT   10(Soma ou Sub)
+--	LUI                 11	 
 
-	-- possíveis valores do seletor
+--  possíveis valores do seletor
 	seletor_1bit <= "00" when seletor = "000" else
 	"01" when seletor = "001" else
 	"10" when seletor = "010" or seletor = "110" or seletor = "111" else
